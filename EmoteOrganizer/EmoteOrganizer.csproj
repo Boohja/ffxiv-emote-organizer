@@ -3,20 +3,25 @@
   <Import Project="Dalamud.Plugin.Bootstrap.targets"/>
 
   <PropertyGroup>
-    <Authors></Authors>
-    <Company></Company>
+    <Authors>Aeron Yushun</Authors>
+    <Company>Yushun Inc.</Company>
     <Version>0.0.0.1</Version>
     <Description>A sample plugin.</Description>
-    <Copyright></Copyright>
-    <PackageProjectUrl>https://github.com/goatcorp/SamplePlugin</PackageProjectUrl>
+    <Copyright>Aeron Yushun</Copyright>
+    <PackageProjectUrl>https://github.com/Boohja/ffxiv-emote-organizer</PackageProjectUrl>
     <PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
     <IsPackable>false</IsPackable>
+    <RootNamespace>EmoteOrganizer</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="..\Data\goat.png">
+    <Content Include="..\Data\logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Visible>false</Visible>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\XivCommon\XivCommon\XivCommon.csproj" />
   </ItemGroup>
 </Project>

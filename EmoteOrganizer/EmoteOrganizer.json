@@ -1,0 +1,12 @@
+{
+  "Author": "Aeron Yushun",
+  "Name": "EmoteOrganizer",
+  "Punchline": "Actually organize your emotes",
+  "Description": "The default emote window is a mess, make it better with /emotes",
+  "InternalName": "emoteOrganizer",
+  "ApplicableVersion": "any",
+  "Tags": [
+    "emote",
+    "organize"
+  ]
+}
