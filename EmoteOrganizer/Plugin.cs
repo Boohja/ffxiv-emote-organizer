@@ -1,9 +1,7 @@
 ﻿using Dalamud.Game.Command;
 using Dalamud.IoC;
 using Dalamud.Plugin;
-using System.IO;
 using System.Linq;
-using System.Numerics;
 using Dalamud.Interface.Windowing;
 using Dalamud.Plugin.Services;
 using EmoteOrganizer.Services;
@@ -53,13 +51,8 @@ namespace EmoteOrganizer
             this.Configuration.Initialize(this.PluginInterface);
             IconService = new IconService(TextureProvider);
             EmoteService = new EmoteService(this);
-            
-            // you might normally want to embed resources and load them from the manifest stream
-            var imagePath = Path.Combine(PluginInterface.AssemblyLocation.Directory?.FullName!, "logo.png");
-            var goatImage = this.PluginInterface.UiBuilder.LoadImage(imagePath);
 
             ConfigWindow = new ConfigWindow(this);
-            Log.Debug("Hey there :D");
             var emotes = Data.GetExcelSheet<Emote>()!.Where(
                 emote => emote.Icon > 0 && emote.TextCommand.Value != null && emote.Icon > 0
             );
@@ -70,7 +63,7 @@ namespace EmoteOrganizer
 
             this.CommandManager.AddHandler(CommandName, new CommandInfo(OnCommand)
             {
-                HelpMessage = "A useful message to display in /xlhelp"
+                HelpMessage = "Opens the main window to manage and run emotes"
             });
 
             this.PluginInterface.UiBuilder.Draw += DrawUI;
@@ -101,6 +94,11 @@ namespace EmoteOrganizer
         public void DrawConfigUI()
         {
             ConfigWindow.IsOpen = true;
+        }
+
+        public void CloseAllWindows()
+        {
+            ConfigWindow.IsOpen = false;
         }
     }
 }

@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Authors>Aeron Yushun</Authors>
     <Company>Yushun Inc.</Company>
-    <Version>0.0.0.1</Version>
+    <Version>0.9.0</Version>
     <Description>A sample plugin.</Description>
     <Copyright>Aeron Yushun</Copyright>
     <PackageProjectUrl>https://github.com/Boohja/ffxiv-emote-organizer</PackageProjectUrl>

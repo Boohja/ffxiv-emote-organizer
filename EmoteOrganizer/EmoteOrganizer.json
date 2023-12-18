@@ -1,12 +1,14 @@
 {
-  "Author": "Aeron Yushun",
-  "Name": "EmoteOrganizer",
-  "Punchline": "Actually organize your emotes",
-  "Description": "The default emote window is a mess, make it better with /emotes",
+  "Author": "Aeron",
+  "Name": "Emote Organizer",
+  "Punchline": "Organize your emotes in groups within a window",
+  "Description": "For all the emotes you don't know out of your head, this plugin allows you to create custom groups in a separate window and assign emotes to them.",
   "InternalName": "emoteOrganizer",
   "ApplicableVersion": "any",
   "Tags": [
     "emote",
     "organize"
-  ]
+  ],
+  "IconUrl": "https://raw.githubusercontent.com/Boohja/ffxiv-emote-organizer/master/images/icon.png", 
+  "RepoUrl": "https://github.com/Boohja/ffxiv-emote-organizer"
 }

@@ -41,6 +41,11 @@ public class MainWindow : Window, IDisposable
         Plugin.IconService.Dispose();
     }
     
+    public override void OnClose()
+    {
+        Plugin.CloseAllWindows();
+    }
+    
     public override void Draw()
     {
         if (ImGui.BeginMenuBar())
